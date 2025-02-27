@@ -22,4 +22,9 @@
         object-fit: cover;
         border-radius: 999px;
         border: 6px lightblue
+
+        h1 {
+            color:rgb(13, 71, 52)
+        }
+        </style>
       }
