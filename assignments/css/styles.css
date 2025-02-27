@@ -10,14 +10,20 @@
         text-align: left;
         background-color: dodgerblue;
         color: #fff
-        padding: 30px 60px;
+        padding: 30px 40px;
       }
+
       h1 {
         text-transform: uppercase;
+        font-size: px48;
+
+      }
+
+      h2 {
+        font-size: 36px;
       }
       h2 {
         font-size: 24px;
-        color:rgb(136, 110, 181)
       }
       img {
         aspect-ratio: 1/1;
