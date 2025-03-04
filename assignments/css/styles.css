@@ -38,12 +38,10 @@ aside img {
   border: 6px solid goldenrod;
 
   #nav-menu li a {
-    color: blue;
-    
-    
+    color: blue; 
   }
 
-  menu-items li a {
+  .menu-items li a {
     color: red;
     font-weight: bold;
     text-decoration: none;
