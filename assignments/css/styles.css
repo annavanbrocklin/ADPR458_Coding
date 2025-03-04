@@ -1,33 +1,39 @@
-      body {
-        background-color: #fff;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-      }
-      .container {
-        width: 960px;
-        margin: 0 auto;
-      }
-      header {
-        text-align: left;
-        background-color: dodgerblue;
-        color: #fff
-        padding: 30px 40px;
-      }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-      h1 {
-        text-transform: uppercase;
-        font-size: px48;
+body {
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
 
-      }
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
 
-      h2 {
-        font-size: 36px;
-      }
-      h2 {
-        font-size: 24px;
-      }
+header {
+  text-align: left;
+  background-color: dodgerblue;
+  color: #fff;
+  padding: 30px 40px;
+}
 
-      aside img {
-        aspect-ratio: 1/1;
-        object-fit: cover;
-        border-radius: 999px;
-        border: 6px lightblue
+h1 {
+  text-transform: uppercase;
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+aside img {
+  width: 180px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 6px solid dodgerblue;
+}
