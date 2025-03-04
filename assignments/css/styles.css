@@ -12,7 +12,7 @@ body {
 
 header {
   text-align: left;
-  background-color: dodgerblue;
+  background-color: palegoldenrod;
   color: #fff;
   padding: 30px 40px;
 }
@@ -35,5 +35,5 @@ aside img {
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 999px;
-  border: 6px solid dodgerblue;
+  border: 6px solid goldenrod;
 }
