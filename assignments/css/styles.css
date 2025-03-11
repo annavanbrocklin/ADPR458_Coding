@@ -66,17 +66,17 @@ img.circle {
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 999px;
-  border: 6px solid dodgerblue;
+  border: 6px solid goldenrod;
 }
 
 /****** Navigation ******/
 
 #nav-menu li a {
-  color: blue;
+  color: palegoldenrod;
 }
 
 .menu-items li a {
-  color: red;
+  color: peru;
   font-weight: bold;
   text-decoration: none;
 }
