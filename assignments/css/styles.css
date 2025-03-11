@@ -9,18 +9,22 @@ body {
   background-color: #fff; 
 }
 
+/****** Layout ******/
+
 .container {
   display: grid;
   grid-gap: 1.5em;
   grid-template-columns: repeat(12, 1fr);
-  width: 960px;
+  width: min(95%, 75em);
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .container > * {
   grid-column: span 12;
 }
 
+/* Desktop Layout */
 @media screen and (min-width: 40em) {
   .col-span-8 {
     grid-column: span 8;
@@ -30,17 +34,16 @@ body {
   }
 }
 
-
 header {
   text-align: left;
-  background-color: palegoldenrod;
+  background-color: dodgerblue;
   color: #fff;
   padding: 30px 40px;
 }
 
 h1 {
   text-transform: uppercase;
-  font-size: clamp(32px 2vw, 48px)
+  font-size: clamp(32px, 4vw, 48px);
 }
 
 h2 {
@@ -51,30 +54,29 @@ h3 {
   font-size: 24px;
 }
 
-aside img {
-  width: 180px;
+aside {
+
+}
+
+img {
+  width: 100%;
+}
+
+img.circle {
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 999px;
-  border: 6px solid goldenrod;
+  border: 6px solid dodgerblue;
+}
 
-  #LAYOUT**********
+/****** Navigation ******/
 
-  #nav-menu li a {
-    color: blue; 
-  }
+#nav-menu li a {
+  color: blue;
+}
 
-  .menu-items li a {
-    color: red;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  p { 
-    padding: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border: 10px solid green
-  }
-
+.menu-items li a {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
 }
