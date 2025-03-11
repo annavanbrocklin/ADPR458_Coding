@@ -1,14 +1,35 @@
 @import url('https://fonts.google.com/specimen/Playfair+Display');
 
 body {
-  background-color: #fff;
   font-family: "Playfair Display", serif;
+  box-sizing: border-box;
+}
+
+* {
+  background-color: #fff; 
 }
 
 .container {
+  display: grid;
+  grid-gap: 1.5em;
+  grid-template-columns: repeat(12, 1fr);
   width: 960px;
   margin: 0 auto;
 }
+
+.container > * {
+  grid-column: span 12;
+}
+
+@media screen and (min-width: 40em) {
+  .col-span-8 {
+    grid-column: span 8;
+  }
+  .col-span-4 {
+    grid-column: span 4;
+  }
+}
+
 
 header {
   text-align: left;
@@ -19,7 +40,7 @@ header {
 
 h1 {
   text-transform: uppercase;
-  font-size: 48px;
+  font-size: clamp(32px 2vw, 48px)
 }
 
 h2 {
@@ -36,6 +57,8 @@ aside img {
   object-fit: cover;
   border-radius: 999px;
   border: 6px solid goldenrod;
+
+  #LAYOUT**********
 
   #nav-menu li a {
     color: blue; 
