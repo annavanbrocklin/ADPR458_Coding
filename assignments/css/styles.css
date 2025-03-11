@@ -5,6 +5,9 @@ body {
   box-sizing: border-box;
   background-image: url("../images/bg.png");
 }
+.container {
+  background-color: white;
+}
 
 * {
   background-color: #fff; 
