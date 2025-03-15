@@ -6,7 +6,7 @@
 }
 
 body {
-  margin: 0px 10%;
+  margin: 0;
   background-image: url("../images/bg.png");
 }
 .container {
@@ -15,15 +15,6 @@ body {
 
 * {
 background-color: #fff; 
-
-/* Desktop Layout */
-@media screen and (min-width: 40em) {
-  .col-span-8 {
-    grid-column: span 8;
-  }
-  .col-span-4 {
-    grid-column: span 4;
-  }
 }
 
 header {
@@ -75,13 +66,24 @@ img.circle {
 
 /****LAYOUT*****/
 .container {
-  background-color: white;
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(12, 1fr);
-}
+    background-color: white;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 auto;
+    width: min(95%, 75 rem);
 
 }
+
 .container > * {
-  grid-column: span 12;
+    grid-column: span 12;
 }
+
+/* Desktop Layout */
+@media screen and (min-width: 40em) {
+  .col-span-8 {
+    grid-column: span 8;
+  }
+  .col-span-4 {
+    grid-column: span 4;
+  }
