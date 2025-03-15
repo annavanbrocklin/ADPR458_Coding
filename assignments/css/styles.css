@@ -1,8 +1,12 @@
 @import url('https://fonts.google.com/specimen/Playfair+Display');
 
-body {
-  font-family: "Playfair Display", serif;
+* {
   box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+body {
+  margin: 0px 10%;
   background-image: url("../images/bg.png");
 }
 .container {
@@ -11,17 +15,6 @@ body {
 
 * {
   background-color: #fff; 
-}
-
-/****** Layout ******/
-
-.container {
-  display: grid;
-  grid-gap: 1.5em;
-  grid-template-columns: repeat(12, 1fr);
-  width: min(95%, 75em);
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .container > * {
@@ -83,4 +76,13 @@ img.circle {
   color: peru;
   font-weight: bold;
   text-decoration: none;
+}
+
+/****LAYOUT*****/
+.container {
+  background-color: white;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(12, 1fr);
+  
 }
