@@ -14,12 +14,7 @@ body {
 }
 
 * {
-  background-color: #fff; 
-}
-
-.container > * {
-  grid-column: span 12;
-}
+background-color: #fff; 
 
 /* Desktop Layout */
 @media screen and (min-width: 40em) {
@@ -84,5 +79,9 @@ img.circle {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(12, 1fr);
-  
+}
+
+}
+.container > * {
+  grid-column: span 12;
 }
