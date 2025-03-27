@@ -8,11 +8,13 @@ body {
   margin: 0;
   background-image: url("../images/bg.png");
 }
+
 header {
-  background-color: white;
-  color: white;
+  text-align: left;
+  background-color: rgb(192, 160, 87);
   padding: 2rem;
 }
+
 h1 {
   font-size: 2rem;
 }
