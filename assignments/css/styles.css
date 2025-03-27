@@ -23,7 +23,7 @@ h3 {
   font-size: 1.25rem;
 }
 .circle {
-  border-radius: 50%;
+  border-radius: 1%;
   border: 5px solid goldenrod
 }
 
