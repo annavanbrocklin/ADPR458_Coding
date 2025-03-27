@@ -27,7 +27,7 @@ h3 {
   border: 5px solid goldenrod
 }
 
-a:link {
+a:link, a:visited {
   color: #5480cd;
   text-decoration: none;
 }
@@ -46,65 +46,8 @@ a:hover {
   width: min(95%, 75 rem);
 }
 
-
-
-.container {
-  background-color: white;
-}
-
-* {
-background-color: #fff; 
-}
-
-header {
-  text-align: left;
-  background-color: dodgerblue;
-  color: #fff;
-  padding: 30px 40px;
-}
-
-h1 {
-  text-transform: uppercase;
-  font-size: clamp(32px, 4vw, 48px);
-}
-
-h2 {
-  font-size: 36px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-aside {
-
-}
-
-img {
-  width: 100%;
-}
-
-img.circle {
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border-radius: 999px;
-  border: 6px solid goldenrod;
-}
-
-/****** Navigation ******/
-
-#nav-menu li a {
-  color: palegoldenrod;
-}
-
-.menu-items li a {
-  color: peru;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .container > * {
-    grid-column: span 12;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 /* Desktop Layout */
@@ -115,3 +58,4 @@ img.circle {
   .col-span-4 {
     grid-column: span 4;
   }
+}
