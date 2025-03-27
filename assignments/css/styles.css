@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Playfair Display", serif;
 }
+
 body {
   margin: 0;
   background-image: url("../images/bg.png");
@@ -26,7 +27,7 @@ h3 {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 img.circle {
@@ -34,10 +35,6 @@ img.circle {
   object-fit: cover;
   border-radius: 999px;
   border: 6px solid goldenrod;
-}
-.circle {
-  border-radius: 50%;
-  border: 5px solid goldenrod
 }
 
 a:link, a:visited {
@@ -54,10 +51,9 @@ a:hover {
 }
 
 #nav-menu ul.active + #toggle-button {
-  position; absolute
+  position: absolute;
   top: 8px;
   right: 12px;
-
 }
 
 /****LAYOUT*****/
@@ -67,7 +63,12 @@ a:hover {
   gap: 1.5rem;
   grid-template-columns: repeat(12, 1fr);
   margin: 0 auto;
-  width: min(95%, 75 rem);
+  width: min(95%, 75rem);
+}
+
+.container > * {
+  grid-column: span 12;
+  padding-inline: 20px;
 }
 
 /* card style*/
@@ -76,31 +77,25 @@ a:hover {
   text-align: center;
   margin: 1rem;
   padding-bottom: 2rem;
-  box-shadow: 0 0 24px - 8px rgb(0, 0, 0.5);
-  border-radius: 18px
-  
+  box-shadow: 0 0 24px -8px rgb(0, 0, 0.5);
+  border-radius: 18px;
+}
+
 .card-text {
   padding: 0 2rem;
 }
-}
 
-.container > * {
-  grid-template-columns: repeat(12, 1fr);
-}
+
 
 /****** Navigation ******/
 
 #nav-menu li a {
-  color: palegoldenrod;
-}
-
-
-
-.menu-items li a {
+  /* color: palegoldenrod; */
   color: peru;
   font-weight: bold;
   text-decoration: none;
 }
+
 
 /* Desktop Layout */
 @media screen and (min-width: 40em) {
@@ -110,23 +105,20 @@ a:hover {
   .col-span-4 {
     grid-column: span 4;
   }
+
+  .work-section {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  
+  .card {
+    flex: 0 1 324px;
+  }
 }
 
-.work-section {
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-}
 
-.card {
-  flex: 0 1 324px;
-}
 
-<div class="card">
-<img class=src="images/annav.jpg" alt="Photo of Anna Van Brocklin">
-<h3>Card Title</h3>
-<p>Description Here</p>
-</div>
 
 /***** Navigation Using Flexbox *******/
 nav {
@@ -137,6 +129,7 @@ nav {
   position: sticky;
   top: 0;
 }
+
 nav ul {
     margin:0;
     padding: 0;
@@ -147,13 +140,13 @@ nav ul {
 nav li {
       margin: 0 0.5rem;
 }
-nav a: link, nav a:visited {
-      color: #white;
+nav a:link, nav a:visited {
+      color: #fff;
       text-decoration: none;
       font-size: 1.125rem;
       padding: 1rem;
-      display: block
-      transition: ease-in-out 250ms;
+      display: block;
+      transition: 250ms ease-in-out;
 }
 nav a:hover {
       background-color: rgb(255, 119, 119);
@@ -163,12 +156,12 @@ nav a:hover {
 /***** Components *******/
 .button:link, .button:visited {
     color: white;
-    background-color: #285ab0
-    text-align: center
-    text-decoration: none
+    background-color: #285ab0;
+    text-align: center;
+    text-decoration: none;
     padding: 1rem 1.75rem;
     border-radius: .5rem;
-    box-shadow 0 .125rem .5rem rgba (0, 0, 0, .15);
+    box-shadow: 0 .125rem .5rem rgba(0, 0, 0, .15);
     display: inline-block;
     margin: 0 .25rem .25rem 0;
     transition: background-color 0.5s ease;
