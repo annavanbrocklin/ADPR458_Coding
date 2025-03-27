@@ -4,11 +4,50 @@
   box-sizing: border-box;
   font-family: "Playfair Display", serif;
 }
-
 body {
   margin: 0;
   background-image: url("../images/bg.png");
 }
+header {
+  background-color: white;
+  color: white;
+  padding: 2rem;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+.circle {
+  border-radius: 50%;
+  border: 5px solid goldenrod
+}
+
+a:link {
+  color: #5480cd;
+  text-decoration: none;
+}
+a:hover {
+  color: #0542ab;
+  text-decoration: underline;
+}
+
+/****LAYOUT*****/
+.container {
+  background-color: white;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0 auto;
+  width: min(95%, 75 rem);
+}
+
+
+
 .container {
   background-color: white;
 }
@@ -62,17 +101,6 @@ img.circle {
   color: peru;
   font-weight: bold;
   text-decoration: none;
-}
-
-/****LAYOUT*****/
-.container {
-    background-color: white;
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(12, 1fr);
-    margin: 0 auto;
-    width: min(95%, 75 rem);
-
 }
 
 .container > * {
