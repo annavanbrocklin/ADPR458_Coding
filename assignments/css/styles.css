@@ -61,7 +61,10 @@ a:hover {
 }
 
 /***** Components *******/
-.button {
+.button:link, .button:visited {
     color: white;
     background-color: #285ab0
+    text-align: center
+    text-decoration: none
+    padding: 1rem 1.75rem;
 }
