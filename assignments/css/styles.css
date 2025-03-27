@@ -49,6 +49,17 @@ a:hover {
   text-decoration: underline;
 }
 
+#toggle-button {
+  margin-left: auto;
+}
+
+#nav-menu ul.active + #toggle-button {
+  position; absolute
+  top: 8px;
+  right: 12px;
+
+}
+
 /****LAYOUT*****/
 .container {
   background-color: white;
@@ -57,6 +68,20 @@ a:hover {
   grid-template-columns: repeat(12, 1fr);
   margin: 0 auto;
   width: min(95%, 75 rem);
+}
+
+/* card style*/
+.card {
+  background-color: #ffffff;
+  text-align: center;
+  margin: 1rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 0 24px - 8px rgb(0, 0, 0.5);
+  border-radius: 18px
+  
+.card-text {
+  padding: 0 2rem;
+}
 }
 
 .container > * {
@@ -68,6 +93,8 @@ a:hover {
 #nav-menu li a {
   color: palegoldenrod;
 }
+
+
 
 .menu-items li a {
   color: peru;
@@ -84,6 +111,22 @@ a:hover {
     grid-column: span 4;
   }
 }
+
+.work-section {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.card {
+  flex: 0 1 254px;
+}
+
+<div class="card">
+<img class=src="images/annav.jpg" alt="Photo of Anna Van Brocklin">
+<h3>Card Title</h3>
+<p>Description Here</p>
+</div>
 
 /***** Navigation Using Flexbox *******/
 nav {
