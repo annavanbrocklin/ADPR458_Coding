@@ -10,8 +10,8 @@ body {
 }
 
 header {
-  
-  background-color: rgb(171, 192, 87);
+  text-align: left;
+  background-color: rgb(202, 183, 91);
   padding: 2rem;
 }
 
@@ -23,6 +23,17 @@ h2 {
 }
 h3 {
   font-size: 1.25rem;
+}
+
+img {
+  width: 100%;
+}
+
+img.circle {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 6px solid goldenrod;
 }
 .circle {
   border-radius: 50%;
