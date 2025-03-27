@@ -10,8 +10,8 @@ body {
 }
 
 header {
-
-  background-color: rgb(192, 160, 87);
+  text-align: left;
+  background-color: rgb(87, 192, 111);
   padding: 2rem;
 }
 
