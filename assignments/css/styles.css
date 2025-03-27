@@ -63,6 +63,18 @@ a:hover {
   grid-template-columns: repeat(12, 1fr);
 }
 
+/****** Navigation ******/
+
+#nav-menu li a {
+  color: palegoldenrod;
+}
+
+.menu-items li a {
+  color: peru;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 /* Desktop Layout */
 @media screen and (min-width: 40em) {
   .col-span-8 {
