@@ -100,9 +100,22 @@ nav ul {
     list-style: none;
     display: flex;
     flex-flow: row wrap;
-
 }
-
+nav li {
+      margin: 0 0.5rem;
+}
+nav a: link, nav a:visited {
+      color: #white;
+      text-decoration: none;
+      font-size: 1.125rem;
+      padding: 1rem;
+      display: block
+      transition: ease-in-out 250ms;
+}
+nav a:hover {
+      background-color: rgb(255, 119, 119);
+      color: white;
+}
 
 /***** Components *******/
 .button:link, .button:visited {
