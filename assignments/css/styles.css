@@ -73,6 +73,16 @@ a:hover {
   }
 }
 
+/***** Navigation Using Flexbox *******/
+nav {
+  background-color: #525252;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+
+
 /***** Components *******/
 .button:link, .button:visited {
     color: white;
