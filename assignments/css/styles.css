@@ -48,8 +48,27 @@ a:hover {
 
 #toggle-button {
   margin-left: auto;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.125em;
+  transition: 0.2 all;
 }
 
+#toggle-button:hover
+#toggle-button:focus {
+  background-color: #666
+}
+
+#toggle-button:focus {
+  background-color: #333
+}
+
+/* Mobile Functionality*/
 #nav-menu ul.active + #toggle-button {
   position: absolute;
   top: 8px;
@@ -168,4 +187,21 @@ nav a:hover {
 }
 .button:hover {
   background-color: #ab7105;
+}
+
+@media (min-width: 40em) {
+  #nav-menu ul {
+
+  }
+}
+
+/*Mobile Layout*/
+
+@media (max-width: 40em) {
+
+#nav-menu ul.active + #toggle-button {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  }
 }
