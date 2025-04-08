@@ -46,26 +46,28 @@ a:hover {
   text-decoration: underline;
 }
 
-#toggle-button {
-  margin-left: auto;
-  background-color: #ffcd7d;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 8px 12px;
-  text-transform: uppercase;
+button {
+  background-color: rgb(231, 207, 86); /* Original color */
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
   font-weight: bold;
   letter-spacing: 0.125em;
-  transition: 0.2 all;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-#toggle-button:hover
-#toggle-button:focus {
-  background-color: #ffe49a
+/* Hover Effect */
+button:hover {
+  background-color: #b0b0b0; /* Gray color when hovered */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
-#toggle-button:focus {
-  background-color: #fdc447
+/* Active (Clicked) Effect */
+button:active {
+  background-color: #808080; /* Darker gray color when clicked */
+  transform: scale(1); /* Reset size when clicked */
 }
 
 /* Mobile Functionality*/
