@@ -1,40 +1,77 @@
-/* Reset basics */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
+/* BODY */
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background-color:white;
-  color:white;
+  font-family: 'Archivo', 'Helvetica Neue', sans-serif;
+  background-color: white;
+  color: black;
 }
 
-/* Nav bar */
+/* HEADER */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid #ddd;
   background-color: white;
 }
 
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 2px;
+.nav-left .logo {
+  width: 80px;
+  margin-right: 1rem;
 }
 
-.navbar .nav-links a {
-  color: black;
-  margin-left: 20px;
+.nav-center a,
+.nav-right a {
+  margin: 0 1rem;
   text-decoration: none;
-  font-size: 1rem;
+  color: black;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
 }
 
-/* Hero section */
+.nav-center {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-right {
+  font-weight: bold;
+}
+
+/* GRAY HEADER */
+.gray-header {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+.gray-header-left {
+  .nav-left img {
+    max-width: 100px; /* Set a max width */
+    max-height: 50px; /* Set a max height */
+    width: .2px; /* Let the width adjust automatically based on height */
+    height: auto; /* Maintain aspect ratio */
+  }  
+}
+
+.gray-header-right {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* HERO */
 .hero {
   height: 80vh;
   background: url('/assignments/nike-images/mainimage.jpg') center/cover no-repeat;
@@ -42,185 +79,449 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1.5rem;
 }
 
-button {
-  background-color: white(231, 207, 86); /* Original color */
+.hero button {
+  background-color: white;
   color: black;
-  padding: 1rem 2rem;
-  border-radius: .5rem;
-  font-weight: bold;
-  letter-spacing: 0.125em;
+  padding: 0.75rem 2rem;
   border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-/* Hover Effect */
-button:hover {
-  background-color: #b0b0b0; /* Gray color when hovered */
+.hero button:hover {
+  background-color: #e5e5e5;
 }
 
-/* Active (Clicked) Effect */
-button:active {
-  background-color: #808080; /* Darker gray color when clicked */
-}
-
-/* In style-nike.css */
-
-.cart-items {
+.product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  /* 3 equal-width columns */
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(7, 1fr); /* Ensures 7 images per row */
+  gap: 1rem;
+  padding: 2rem 1rem;
+  background-color: #fff; /* Changed background color to white */
 }
 
 .product {
-  background-color: #f4f4f4;
-  padding: 20px;
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: space-between;
-  height: 100%; /* Ensure products take up full space available */
-  text-align: center; /* Center text */
-  max-width: 250px; /* Limit the max size of each product container */
-  margin: 0 auto; /* Center the products within the grid */
+  text-align: center;
 }
 
 .product img {
-  max-width: 100%;  /* Ensure images do not exceed the container width */
-  height: auto;     /* Keep the aspect ratio */
-  margin-bottom: 10px; /* Space between the image and text */
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures images are cropped and fill the area */
 }
 
 .product h3 {
-  font-size: 1.2rem;
-  margin: 10px 0;
-}
-
-.product p {
   font-size: 1rem;
-  margin: 5px 0;
+  font-weight: normal; /* Normal weight for text, not bold */
+  margin-top: 0.5rem;
+  color: #333;
 }
 
-.product button {
-  background-color: #ffcd7d;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
+.product-grid {
+  max-width: 100%; /* Ensures grid uses available space */
 }
 
-.product button:hover {
-  background-color: #ffe49a;
+.product {
+  /* Removed rounded corners, padding, background */
+  border-radius: 0; /* Makes edges sharp */
+  box-shadow: none; /* Removes shadow */
 }
 
-/* ---------------- CART PAGE STYLES ---------------- */
-.cart-container {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 1rem;
-  font-family: 'Helvetica Neue', sans-serif;
+
+/* THREE VERTICAL IMAGES SECTION */
+.three-images {
+  display: flex; /* Arrange images in a row */
+  justify-content: space-between; /* Space them out evenly */
+  gap: 1rem; /* Reduced space between images */
+  margin-top: 2rem; /* Space from previous section */
+  padding: 2rem; /* Padding around the section */
+}
+
+.image-item {
+  position: relative; /* For positioning the button on the image */
+  width: 30%; /* Each image takes up 30% of the container */
+}
+
+.image-item img {
+  width: 100%; /* Make image fill its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any gaps under the image */
+}
+
+.image-item button {
+  position: absolute; /* Position the button on top of the image */
+  bottom: 20px; /* Space from the bottom of the image */
+  left: 25%; /* Move button more to the left (adjusted from 50%) */
+  transform: translateX(-50%); /* Center the button horizontally based on the new 'left' value */
+  background-color: white;
   color: black;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1; /* Ensure the button stays on top */
 }
 
-.cart-container h1 {
+.image-item button:hover {
+  background-color: #e5e5e5; /* Hover effect */
+}
+
+/* IN RARE FORM SECTION */
+.rare-form {
+  background-color: white; /* White background */
+  padding: 5rem 2rem; /* Space around the content */
+  text-align: center; /* Center the text */
+}
+
+.rare-form h2 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-weight: bolder; /* Bold for the "In Rare Form" text */
+  margin-bottom: 1rem; /* Space between the title and paragraph */
 }
 
-.cart-item {
+.rare-form p {
+  font-size: 1.2rem; /* Smaller text under the title */
+  font-weight: normal; /* Unbolded */
+  color: #555; /* Darker gray text color */
+  margin-bottom: 2rem; /* Space before the button */
+}
+
+.rare-form button {
+  background-color: black;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rare-form button:hover {
+  background-color: #e5e5e5;
+}
+
+
+/* Second Hero Section */
+.hero-second {
+  background-image: url('/assignments/nike-images/hero2.png'); /* Your second image path */
+  height: 600px; /* Adjust height as needed */
+  margin-top: 50px; /* Adds space between the first and second sections */
   display: flex;
-  gap: 1.5rem;
-  margin: 2rem 0;
-  border-top: 1px solid #ddd;
-  padding-top: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
 }
 
-.cart-img {
-  width: 150px;
-  border-radius: 8px;
+.hero-second .hero-content {
+  text-align: center;
+  padding: 1.5rem;
 }
 
-.cart-details {
+.hero-second .btn-primary {
+  padding: 0.8rem 2rem;
+  background-color: #333; /* Can adjust color */
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  display: inline-block;
+}
+
+.hero-second .btn-primary:hover {
+  background-color: #444; /* Hover effect for the button */
+}
+
+
+.cart-section {
+  background-color: #fff;
+  padding: 40px 10%;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.cart-left {
   flex: 1;
 }
 
-.cart-details h2 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+.cart-left h2 {
+  font-size: 28px;
+  font-weight:lighter
+  margin-bottom 10px;
 }
 
-.cart-details p {
-  margin: 0.25rem 0;
+.cart-left p {
+  font-size: 16px;
+  color: #888;
 }
 
-.price {
-  font-weight: bold;
-  margin-top: 0.5rem;
+.favorites {
+  margin-top: 30px;
 }
 
-.cart-summary {
-  border-top: 1px solid #ddd;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  text-align: right;
+.favorites h3 {
+  font-size: 20px;
+  font-weight: lighter
 }
 
-.checkout-btn {
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  border-radius: 4px;
+.favorites p {
+  font-size: 16px;
+  color: #888;
 }
 
-.checkout-btn:hover {
-  background-color: #333;
-}
-
-/* Footer */
-.footer {
-  background-color: white;
-  padding: 40px 20px;
+.recommended-items {
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.recommended-item {
+  text-align: center;
+}
+
+.recommended-item img {
+  width: 100%;
+  height: auto;
+  max-width: 200px; /* Set max width for images */
+}
+
+.item-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.item-price {
+  font-size: 16px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.cart-right {
+  flex: 0.3;
+  padding: 20px;
+  border-left: 1px solid #eee;
+}
+
+.cart-summary h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cart-summary .subtotal {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.checkout-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f5f5f5;
+  color: #888;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.checkout-button:hover {
+  background-color: #ddd;
+}
+
+
+@media (max-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(6, 1fr); /* For smaller screens, 6 per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(5, 1fr); /* 5 per row */
+  }
+}
+
+@media (max-width: 700px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 per row */
+  }
+}
+
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  }
+}
+
+@media (max-width: 1100px) {
+  .product-grid {
+    grid-template-columns: repeat(6, 1fr); /* For smaller screens, 6 per row */
+  }
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(5, 1fr); /* 5 per row */
+  }
+}
+
+@media (max-width: 700px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 per row */
+  }
+}
+
+@media (max-width: 500px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  }
+}
+
+
+
+/* Footer Style */
+.footer-top {
+  background-color: #fff; /* Light gray background */
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.footer-links {
+
+footer {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 800px;
-  margin-bottom: 20px;
+  justify-content: center;  /* Centers the logo horizontally */
+  align-items: center;      /* Centers the logo vertically if needed */
+  padding: 20px 0;          /* Optional: adds space around the footer */
 }
 
-.footer-links div h4 {
-  margin-bottom: 10px;
+.footer-logo img {
+  max-width: 100%;  /* Optional: ensures the logo doesn't overflow */
+  height: auto;     /* Optional: maintains the aspect ratio of the logo */
 }
 
-.footer-links ul {
+.footer-links {
+  text-align: center;  /* Centers the text within the footer-links */
+  margin-top: 10px;     /* Adds space above the text, adjust as needed */
+}
+
+.footer-links p {
+  font-size: 14px; /* Adjust the font size as needed */
+  color: #000;     /* Adjust the text color */
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+.footer-middle {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+}
+
+.footer-column h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
   list-style: none;
+  padding: 0;
 }
 
-.footer-links a {
-  color: black;
+.footer-column a {
   text-decoration: none;
+  color: #333;
   font-size: 0.9rem;
 }
 
-.footer p {
+.footer-column a:hover {
+  color: #000;
+}
+
+.footer-bottom {
+  background-color: #fff; /* Darker gray for bottom footer */
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-info ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-info a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.footer-info a:hover {
+  color: #000;
+}
+
+.footer-copy {
   font-size: 0.8rem;
-  opacity: 0.6;
+  color: #777;
+}
+
+/* Lower Footer Section with Line */
+.footer-resources {
+  background-color: #fff; /* Same gray as the middle section */
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-line {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.footer-resources-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-resources-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.3rem;
+}
+
+.footer-resources-links a:hover {
+  color: #000;
 }

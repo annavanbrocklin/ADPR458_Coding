@@ -8,77 +8,129 @@
 </head>
 <body>
 
-  <header class="navbar">
-    <img src="nike-images/nikelogo.jpg" alt="Product 2">
-    <div class="logo">NIKE</div>
-    <nav class="nav-links">
-      <a href="nike-home.html">Home</a>
+<!-- HEADER 1 (Gray) -->
+<header class="navbar gray-header">
+  <div class="nav-left">
+    <img src="nike-images/jordanlogo.png" alt="Logo 1" class="logo-left">
+    <img src="nike-images/otherlogo.png" alt="Logo 2" class="logo-right">
+  </div>
+  <div class="nav-right">
+    <p>Find a Store | Help | Join Us | Sign In </p>
+  </div>
+</header>
+
+
+  <!-- HEADER 2 (White) -->
+  <header class="navbar white-header">
+    <div class="nav-left">
+      <img src="nike-images/nikelogo.jpg" alt="Nike Logo" class="logo">
+    </div>
+    <nav class="nav-center">
       <a href="#">Men</a>
       <a href="#">Women</a>
       <a href="#">Kids</a>
+      <a href="#">Sale</a>
     </nav>
+    <div class="nav-right">
+      <img src="nike-images/heart.png" alt="Heart" class="logo">
+      <a href="/assignments/nike-cart.html"><img src="/assignments/nike-images/shoppingbag.png" alt="bag"></a>
+    </div>
   </header>
 
+  <section class="cart-section">
+    <div class="cart-container">
+      <!-- Left Side -->
+      <div class="cart-left">
+        <h2>Bag</h2>
+        <p>1 item in your bag</p>
 
+        <section class="cart-item">
+          <img src="/assignments/nike-images/productshoe.jpeg" alt="Product" class="cart-img">
+          <div class="cart-details">
+            <h2>Nike Air Max 270</h2>
+            <p>Size: 9</p>
+            <p>Quantity: 1</p>
+            <p class="price">$150.00</p>
+          </div>
+        </section>
+        
+        <div class="favorites">
+          <h3>Favorites</h3>
+          <p>Want to view your favorites?</p>
+        </div>
   
-  <!-- CART SECTION -->
-  <main class="cart-container">
-    <h1>Your Bag</h1>
-    <p>You have 1 item in your bag.</p>
-  
-    <section class="cart-item">
-      <img src="/assignments/nike-images/productshoe.jpeg" alt="Product" class="cart-img">
-      <div class="cart-details">
-        <h2>Nike Air Max 270</h2>
-        <p>Size: 9</p>
-        <p>Quantity: 1</p>
-        <p class="price">$150.00</p>
+        <div class="recommended-items">
+          <div class="recommended-item">
+            <img src="/assignments/nike-images/shoe1.png" alt="Product 1">
+            <p class="item-title">Nike Legend</p>
+            <p class="item-price">$100.00</p>
+          </div>
+          <div class="recommended-item">
+            <img src="/assignments/nike-images/shoe2.png" alt="Product 2">
+            <p class="item-title">Nike Free</p>
+            <p class="item-price">$150.00</p>
+          </div>
+          <div class="recommended-item">
+            <img src="/assignments/nike-images/shoe3.png" alt="Product 3">
+            <p class="item-title">Nike Lows</p>
+            <p class="item-price">$120.00</p>
+          </div>
+        </div>
       </div>
-    </section>
   
-    <div class="cart-summary">
-      <h3>Summary</h3>
-      <p>Subtotal: $150.00</p>
-      <button class="checkout-btn">Checkout</button>
-    </div>
-  </main>
-  
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 Nike. All rights reserved.</p>
-  </footer>
-  
-
-<!-- In your nike-cart.html file -->
-<section class="cart-items">
-    <div class="cart-item">
-      <img src="nike-images/shoe1.png" alt="Product 1">
-      <p>Nike Legend Essential 2 Premium</p>
-      <p>$45</p>
-    </div>
-    <div class="cart-item">
-      <img src="nike-images/shoe2.png" alt="Product 2">
-      <p>Nike Free Metcon 6</p>
-      <p>$120</p>
-    </div>
-    <div class="cart-item">
-      <img src="nike-images/shoe3.png" alt="Product 3">
-      <p>Nike P-6000</p>
-      <p>$92</p>
-    </div>
-    <!-- Add more items as needed -->
-  </section>  
-
-      <div class="summary">
-        <h2>Summary</h2>
-        <p>Subtotal: $120.00</p>
-        <p>Shipping: Free</p>
-        <hr>
-        <p><strong>Total: $120.00</strong></p>
-        <button>Checkout</button>
+      <!-- Right Side -->
+      <div class="cart-right">
+        <div class="cart-summary">
+          <h3>Summary</h3>
+          <p class="subtotal">Subtotal: $370.00</p>
+          <button class="checkout-button">Checkout</button>
+        </div>
       </div>
     </div>
-  </main>
+  </section>
+
+
+  <div class="footer-middle">
+    <div class="footer-column">
+      <h4>Featured</h4>
+      <ul>
+        <li><a href="#">Air Force 1</a></li>
+        <li><a href="#">Jordan 1</a></li>
+        <li><a href="#">Air Max Dn</a></li>
+        <li><a href="#">Vomero</a></li>
+      </ul>
+    </div>
+  
+    <div class="footer-column">
+      <h4>Shoes</h4>
+      <ul>
+        <li><a href="#">All Shoes</a></li>
+        <li><a href="#">Jordan Shoes</a></li>
+        <li><a href="#">Running Shoes</a></li>
+        <li><a href="#">Basketball</a></li>
+      </ul>
+    </div>
+  
+    <div class="footer-column">
+      <h4>Clothing</h4>
+      <ul>
+        <li><a href="#">All Clothing</a></li>
+        <li><a href="#">Tops & T-Shirts</a></li>
+        <li><a href="#">Shorts</a></li>
+        <li><a href="#">Hoodies & Pullovers</a></li>
+      </ul>
+    </div>
+  
+    <div class="footer-column">
+      <h4>Kids</h4>
+      <ul>
+        <li><a href="#">Infants & Toddler Shoes</a></li>
+        <li><a href="#">Kids Shoes</a></li>
+        <li><a href="#">Kids Basketball Shoes</a></li>
+        <li><a href="#">Kids Running Shoes</a></li>
+      </ul>
+    </div>
+  </div>
 
   <footer class="footer">
     <p>© 2025 Nike, Inc. All Rights Reserved.</p>
