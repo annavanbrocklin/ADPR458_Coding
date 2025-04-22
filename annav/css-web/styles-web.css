@@ -30,9 +30,7 @@ body {
 .header-content {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 1rem;
 }
 
 .portrait {
@@ -85,15 +83,6 @@ h1 {
   margin: auto;
 }
 
-.category {
-  transition: 0.3s ease;
-}
-
-.category:hover {
-  transform: scale(1.02);
-  cursor: pointer;
-}
-
 .category img {
   width: 100%;
   height: auto;
@@ -120,7 +109,6 @@ h1 {
 
 .contact-button {
   margin-top: 1rem;
-  margin-bottom: 1rem;
   background-color: black;
   color: white;
   border: none;
@@ -139,16 +127,4 @@ h1 {
   height: 25px;
   margin: 0 0.5rem;
   vertical-align: middle;
-}
-
-@media (max-width: 768px) {
-  .categories {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-
-  .header-content {
-    flex-direction: column;
-    align-items: center;
-  }
 }
