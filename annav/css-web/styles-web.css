@@ -202,3 +202,21 @@ body {
 .contact-section p {
   margin-bottom: 1rem;
 }
+
+.work-section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.work-section h2 {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.work-section p {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
