@@ -155,3 +155,50 @@ body {
   margin: 0 0.5rem;
   vertical-align: middle;
 }
+
+.about-sections {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-block {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-photo {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.work-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.work-item img:hover {
+  transform: scale(1.05);
+}
+
+.contact-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.contact-section p {
+  margin-bottom: 1rem;
+}
